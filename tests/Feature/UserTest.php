@@ -17,9 +17,8 @@ class UserTest extends TestCase
 
         $success = Auth::attempt([
             "email" => "eko@localhost",
-            "password" => 'rahasia',
+            "password" => "rahasia"
         ], true);
-
         self::assertTrue($success);
 
         $user = Auth::user();
@@ -91,4 +90,6 @@ class UserTest extends TestCase
             ->assertSeeText("Hello Khannedy");
 
     }
+
+
 }
